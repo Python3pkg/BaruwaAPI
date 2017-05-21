@@ -19,10 +19,10 @@ import os
 import json
 import threading
 
-from urllib import unquote
-from urlparse import urlparse
-from urlparse import parse_qsl, parse_qs
-from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
+from urllib.parse import unquote
+from urllib.parse import urlparse
+from urllib.parse import parse_qsl, parse_qs
+from http.server import BaseHTTPRequestHandler, HTTPServer
 
 from restkit.util import to_bytestring
 

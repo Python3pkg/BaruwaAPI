@@ -1,6 +1,6 @@
-import t
+from . import t
 
-from _st import HOST, PORT
+from ._st import HOST, PORT
 from BaruwaAPI.endpoints import ENDPOINTS
 
 

@@ -1,4 +1,4 @@
-import t
+from . import t
 
 from BaruwaAPI.exceptions import BaruwaAPIError
 

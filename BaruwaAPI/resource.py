@@ -40,7 +40,7 @@ class BaruwaAPIClient(Resource):
         try:
             self.response = self.request(
                 *args, headers=self._request_headers(), **kwargs)
-        except BaseException, err:
+        except BaseException as err:
             code = 520
             if hasattr(err, 'status_int'):
                 code = err.status_int

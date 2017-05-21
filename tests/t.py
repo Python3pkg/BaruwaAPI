@@ -1,7 +1,7 @@
 from BaruwaAPI.resource import BaruwaAPIClient
 
 
-from _st import HOST, PORT, TOKEN, run_server_test
+from ._st import HOST, PORT, TOKEN, run_server_test
 run_server_test()
 
 
@@ -20,7 +20,7 @@ class ApiRequest(object):
         def run():
             res = BaruwaAPIClient(self.api_token, self.url, **self.client_opts)
             func(res)
-        run.func_name = func.func_name
+        run.__name__ = func.__name__
         return run
 
 
