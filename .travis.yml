@@ -1,7 +1,11 @@
+sudo: required
 language: python
+
 python:
-    - 2.6
-    - 2.7
+  - "2.7"
+  - "3.6"
+  - "3.7-dev" # 3.7 development branch
+
 install:
     - python setup.py install
 script: nosetests
@@ -15,7 +19,6 @@ notifications:
     recipients:
       - andrew@topdog.za.net
 before_install:
-    - if [[ $TRAVIS_PYTHON_VERSION == '2.6' ]]; then pip install -r requirements/requirements26_dev.txt; fi
     - if [[ $TRAVIS_PYTHON_VERSION == '2.7' ]]; then pip install -r requirements/requirements27_dev.txt; fi
     - pip install codecov
 after_success:
